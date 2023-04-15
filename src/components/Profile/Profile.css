@@ -1,0 +1,32 @@
+.profile {
+    grid-area: content;
+    border: solid 2px black;
+}
+
+
+.profile__wallpaper {
+    width: 100%;
+    object-fit: fill;
+    height: 200px;
+}
+
+.profile__description {
+    display: flex;
+}
+
+
+.profile__picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile__info {
+   list-style-type: none;
+   padding: 0;
+   margin-left: 40px;
+}
+
+.profile__name {
+    
+}
