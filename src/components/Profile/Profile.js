@@ -14,10 +14,10 @@ function Profile() {
               <img className='profile__picture' src={avatar}></img>
                 <div className='profile__info'>
                 <h2 className='profile__name'>Евгения</h2>
-                  <p className='profile__text'>Дата рождения</p>
-                  <p className='profile__text'>Город</p>
-                  <p className='profile__text'>Образование</p>
-                  <p className='profile__text'>Хобби</p>
+                  <p className='profile__text'>Дата рождения: 20.10.2003</p>
+                  <p className='profile__text'>Город: Москва</p>
+                  <p className='profile__text'>ОбразованиеЖ Нет</p>
+                  <p className='profile__text'>ХоббиЖ танцы</p>
                 </div>
               </div>
             <div className='profile__posts'>
