@@ -5,9 +5,13 @@
   "nav content content";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
- gap: 5px;
+ 
 
- background-color: cornsilk;
+ background-color: #E0F4F5;
 }
 
 
+.App__content {
+  grid-area: content;
+  border: solid 2px #E0F4F5;
+}

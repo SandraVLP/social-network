@@ -1,0 +1,29 @@
+.nav {
+    grid-area: nav;
+    background-color: #E0F4F5;
+    border-right: 2px solid #a7d1d2;
+    
+
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.link {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
