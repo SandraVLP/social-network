@@ -9,27 +9,16 @@ import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let rerenderEntireThree = (state) => {
-  root.render(
-    <React.StrictMode>
-      <BrowserRouter>
-        <Provider store={store}>
-          <App
-            // state={state}
-            // store={store}
-            // dispatch={store.dispatch.bind(store)}
-          />
-        </Provider>
-      </BrowserRouter>
-    </React.StrictMode>
-  );
-};
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
 
-rerenderEntireThree(store.getState());
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireThree(state);
-});
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

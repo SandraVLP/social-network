@@ -21,6 +21,9 @@ function Navigation() {
       <NavLink to='music' className={({ isActive }) =>
       isActive ? s.active : s.link
     }>Music</NavLink> 
+          <NavLink to='users' className={({ isActive }) =>
+      isActive ? s.active : s.link
+    }>Users</NavLink> 
       <NavLink to='settings' className={({ isActive }) =>
       isActive ? s.active : s.link
     }>Settings</NavLink> 

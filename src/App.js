@@ -2,10 +2,10 @@ import './App.css';
 import React from 'react';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
-import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import { Route, Routes } from 'react-router-dom';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import UsersContainer from './components/Users/UsersContainer';
 
 
 function App(props) {
@@ -15,8 +15,9 @@ function App(props) {
 <Navigation />
 <div className='App__content'>
   <Routes>
-  <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route> 
-  <Route path='profile' element={<Profile store={props.store} />}></Route> 
+  <Route path='/dialogs' element={<DialogsContainer />}></Route> 
+  <Route path='profile/:userId?' element={<ProfileContainer />}></Route> 
+  <Route path='users' element={<UsersContainer />}></Route> 
   </Routes>
 </div>
 
