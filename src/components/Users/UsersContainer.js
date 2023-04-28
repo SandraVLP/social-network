@@ -11,6 +11,7 @@ import {
   getUsers,
 } from "../../redux/usersReducer";
 import withAuthRedirectComponent from "../../utils/withAuthRedirect";
+import { compose } from "redux";
 
 class UsersApiComponent extends React.Component {
   componentDidMount() {
@@ -49,14 +50,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-
-let authRedirectComponent = withAuthRedirectComponent(UsersApiComponent)
-
-export default connect(mapStateToProps, {
+export default compose(connect(mapStateToProps, {
   follow,
   unfollow,
   setCurrentPage,
 
   getUsers,
-})(authRedirectComponent);
+}), withAuthRedirectComponent)(UsersApiComponent);
 
