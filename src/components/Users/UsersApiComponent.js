@@ -1,8 +1,7 @@
 
 import React from "react";
 import Users from "./Users";
-import spin from "../../images/spin.svg";
-import { UsersApi } from "../../API/Api"
+import Preloader from "../Preloader/Preloader";
 
 class UsersApiComponent extends React.Component {
   componentDidMount() {
@@ -10,17 +9,11 @@ this.props.getUsers(this.props.currentPage, this.props.pageSize);
   }
 
   onPageChanged = (p) => {
-    this.props.setCurrentPage(p);
-    this.props.setIsFetching(true);
-    UsersApi.getUsers(p, this.props.pageSize)
-      .then((data) => {
-        this.props.setUsers(data.items);
-        this.props.setIsFetching(false);
-      });
+    this.props.getUsers(p, this.props.pageSize);
   };
   render() {
 
-    return (<>{this.props.isFetching ? <img src={spin} /> : null}
+    return (<>{this.props.isFetching ? <Preloader /> : null}
     <Users totalUsersCount={this.props.totalUsersCount}
       pageSize={this.props.pageSize}
       currentPage={this.props.currentPage}
