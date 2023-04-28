@@ -1,6 +1,6 @@
 import s from "./users.module.css";
 import avatar from "../../images/avatar.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import { createPages } from "../../utils/pagesCreator";
 
 
@@ -9,7 +9,6 @@ function Users(props) {
   let pages = [];
 
   createPages(pages, pagesCount, props.currentPage);
-
   return (
     <div>
       <div>

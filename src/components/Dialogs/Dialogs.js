@@ -2,7 +2,8 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "../DialogItem/DialogItem";
 import Message from "../Message/Message";
-import { handleMessageChangeActionCreator, sendMessageActionCreator } from '../../redux/dialogsReducer'
+
+import { Navigate } from "react-router-dom";
 
 function Dialogs(props) {
   const state = props.dialogsPage;
