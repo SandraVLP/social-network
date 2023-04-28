@@ -1,17 +1,17 @@
 import './App.css';
 import React from 'react';
-import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import { Route, Routes } from 'react-router-dom';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 
 function App(props) {
   return (
     <div className='App'>
-  <Header />
+  <HeaderContainer />
 <Navigation />
 <div className='App__content'>
   <Routes>

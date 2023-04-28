@@ -7,6 +7,8 @@ import {
   setCurrentPage,
   setTotalUsersCount,
   setIsFetching,
+  toggleFollowingInProgress,
+  getUsersThunkCreator
 } from "../../redux/usersReducer";
 
 const mapStateToProps = (state) => {
@@ -16,6 +18,7 @@ const mapStateToProps = (state) => {
     totalUsersCount: state.usersPage.totalUsersCount,
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
+    followingInProgress: state.usersPage.followingInProgress
   };
 };
 
@@ -26,5 +29,7 @@ export default connect(mapStateToProps, {
   setUsers,
   setCurrentPage,
   setTotalUsersCount,
-  setIsFetching
+  setIsFetching,
+  toggleFollowingInProgress,
+  getUsers: getUsersThunkCreator
 })(UsersApiComponent);
