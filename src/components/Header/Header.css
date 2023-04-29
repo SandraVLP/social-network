@@ -14,3 +14,7 @@
 .header__title {
   margin-left: 5px;
 }
+
+.header__auth {
+  margin-left: 200px;
+}

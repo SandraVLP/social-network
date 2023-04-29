@@ -18,22 +18,37 @@ export const UsersApi = {
       });
   },
   follow(userId) {
-    return instance.post(baseUrl + `follow/${userId}`)
+    return instance.post(baseUrl + `follow/${userId}`);
   },
   unfollow(userId) {
-    return instance.delete(baseUrl + `follow/${userId}`)
+    return instance.delete(baseUrl + `follow/${userId}`);
   },
+};
+
+export const profileApi = {
   getProfile(userId) {
-    return instance
-      .get(baseUrl + `profile/` + userId)
-  }
+    return instance.get(baseUrl + `profile/` + userId);
+  },
+  getStatus(userId) {
+    return instance.get(baseUrl + `profile/status/` + userId);
+  },
+  updateStatus(status) {
+    return instance.put(baseUrl + `profile/status/`, { status: status });
+  },
 };
 
 export const AuthApi = {
   me() {
-    return instance
-    .get(baseUrl + `auth/me`)
+    return instance.get(baseUrl + `auth/me`);
   },
-
+  login(email, passward, rememberMe = false) {
+    return instance.post(baseUrl + `auth/login`, {
+      email,
+      passward,
+      rememberMe,
+    });
+  },
+  logout() {
+    return instance.delete(baseUrl + `auth/login`);
+  },
 };
-

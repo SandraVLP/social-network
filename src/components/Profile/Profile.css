@@ -1,33 +1,44 @@
 .profile {
-    grid-area: content;
-    border: solid 2px #015366
-    ;
+  grid-area: content;
+  border: solid 2px #015366;
 }
 
-
 .profile__wallpaper {
-    width: 100%;
-    object-fit: fill;
-    height: 200px;
+  width: 100%;
+  object-fit: fill;
+  height: 200px;
 }
 
 .profile__description {
-    display: flex;
+  display: flex;
 }
 
-
 .profile__picture {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .profile__info {
-   list-style-type: none;
-   padding: 0;
-   margin-left: 40px;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 40px;
 }
 
 .profile__name {
-    
+}
+
+.profile__status-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.profile__status {
+    margin-right: 5px;
+}
+
+.profile__status-text {
+    font-style: italic;
 }

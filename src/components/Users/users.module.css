@@ -6,3 +6,26 @@ height: 200px;
 .selectedPage {
     font-weight: bold;
 }
+
+.button {
+    margin-bottom: 5px;
+
+}
+
+.container {
+display: flex;
+align-items: center;
+margin-left: 10px;
+margin-bottom: 5px;
+}
+
+.info {
+    margin-left: 10px;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
